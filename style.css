@@ -56,7 +56,7 @@ button {
 #cart-button {
     background: none;
     border: none;
-    border-radius: 60%;
+    border-radius: 50%;
     padding: 5px;
     border: 1px solid #000000;
     cursor: pointer;
@@ -121,4 +121,76 @@ button {
 #cart-products button {
     border: 1px solid #000;
     margin: 0.5rem 0;
+}
+
+/* -----Profile Page----- */
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#profile {
+    background-color: tomato;
+    padding: 1rem 3rem;
+    flex-basis: 20rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.profile-img {
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px 0 #000;
+    width: 10rem;
+    margin: 2rem 0;
+    background-color: #ffffff;
+}
+
+.products-link {
+    font-size: 2rem;
+    color: #000000;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.products-link:hover {
+    transform: scale(1.2);
+}
+
+.user-products {
+    position: relative;
+}
+
+.user-products h1 {
+    position: absolute;
+    left: 2rem;
+    top: -1.2rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px #000000;
+}
+
+#user-products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: tomato;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 1rem;
+}
+
+/* -----Responsive----- */
+
+@media screen and (max-width: 1000px){
+    #products-grid, #user-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px){
+    #products-grid, #user-products-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
